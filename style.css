@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    padding: 15px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    max-width: 70%;
+}
+
+header h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+
+header img {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #333;
+}
+
+
+section {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #dddddd;
+}
+
+
+p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+
+aside {
+    background-color: #141414;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #00bfff;
+    margin-top: 15px;
+}
+
+
+a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.contatos {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contatos img {
+    width: 30px;
+    height: 30px;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 13px;
+}
+.minha_foto{
+ max-width: 5000px;
+}
+
+.rodape{
+    display: flex;                
+    justify-content: center;      
+    align-items: center;         
+    gap: 10px;                    
+    height: 5vh!
+}
+
+.logoInsta{
+  border-radius: 100%;
+  border: 1px solid whitesmoke;
+  max-width: 50px;
+}
+.logo_github{
+  border-radius: 100%;
+  border: 1px solid whitesmoke;
+  max-width: 50px;
+}
+
+.Curso{
+    border-radius: 10%;
+    border: 1px solid whitesmoke;
+    max-width: 75px
+}
