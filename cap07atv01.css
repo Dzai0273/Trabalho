@@ -137,7 +137,7 @@ p {
 */
 .botao {
   display: inline-block;
-  background-color: red; /* Regra mais fraca */
+  background-color: #555555; /* Regra mais fraca */
   color: #ffffff;
   font-size: 1rem;
   text-decoration: none;
@@ -147,11 +147,11 @@ p {
 }
 
 .cartao .botao {
-  background-color: #1565c0; /* Regra mais forte por cascata/especificidade */
+  background-color: red; /* Regra mais forte por cascata/especificidade */
 }
 
 .botao:hover {
-  background-color: #0d47a1;
+  background-color: darkred;
 }
 
 /* ---------- Lista de programação ---------- */
