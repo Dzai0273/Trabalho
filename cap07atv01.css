@@ -1,0 +1,250 @@
+/* REFLEXÃO - BLOCO 1:
+ rem tem como referência o tamanho da fonte definido no html (raiz).
+ em usa como referência o tamanho da fonte do elemento pai.
+ % usa como referência o tamanho do elemento que o contém.
+ Por isso cada unidade reage de acordo com sua referência.
+ rem é recomendado para manter um padrão no site ao usar zoom.
+ em é útil para ajustar elementos relacionados ao texto (como botões).
+ % é muito usado em layouts que precisam se adaptar ao espaço disponível em diferentes telas. 
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  background-color: #1565c0;
+  padding: 1rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.subtitulo {
+  color: #bbdefb;
+  font-size: 1rem;
+}
+
+/* ---------- Menu de navegação ---------- */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+/* REFLEXÃO - BLOCO 2:
+ O seletor descendente (espaço) atinge elementos em qualquer nível de profundidade (ex: .menu a atinge todas as âncoras dentro de .menu). 
+ O seletor de filho direto (>) atingiria apenas os elementos que são filhos imediatos do elemento pai.
+*/
+.menu a {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a::before {
+  content: "› "; /* Pseudo-elemento antes de cada link */
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  color: #bbdefb; /* Retorno visual no estado de interação */
+}
+
+/* ---------- Seções ---------- */
+.secao {
+  padding: 2rem;
+  max-width: 80%; /* Dimensão flexível */
+}
+
+h2 {
+  color: #1565c0;
+  font-size: 1.5rem;
+}
+
+/* Irmão adjacente (+): Recuo superior apenas no parágrafo que segue imediatamente o h2 */
+h2 + p {
+  margin-top: 1.5rem;
+}
+
+h3 {
+  color: #0d47a1;
+  font-size: 1.125rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5; /* Convertido de px para relativo */
+}
+
+.destaque {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+/* Irmão geral (~): Seleciona parágrafos que sucedem o destaque na mesma seção */
+.destaque ~ p {
+  background-color: #ffebee;
+  padding: 1em;
+  border-left: 4px solid #b71c1c;
+}
+
+/* ---------- Grade de trilhas ---------- */
+.cartao {
+  display: inline-block;
+  width: 45%; /* Dimensão flexível para caber na grade */
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  padding: 1em;
+  margin: 0.5em;
+  box-sizing: border-box;
+}
+
+/* Exclusão: margem inferior em todos os cartões, exceto no último */
+.cartao:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+/* REFLEXÃO - BLOCO 3:
+ O pseudo-seletor :nth-child() permite aplicar estilos baseados na ordem dos elementos no HTML (como criar um efeito zebra com even/odd), sem a necessidade de sujar o código HTML adicionando classes extras como "par" ou "impar" em cada tag.
+*/
+.cartao:nth-child(even) {
+  background-color: #f8fcf8; /* Efeito zebra - pares */
+}
+
+.cartao:nth-child(odd) {
+  background-color: #ffffff; /* Efeito zebra - ímpares */
+}
+
+/* ---------- Conflito e Especificidade ---------- */
+/* REFLEXÃO - BLOCO 4:
+ Criei duas regras para o botão. A regra '.cartao .botao' possui uma especificidade maior (0,2,0) do que apenas '.botao' (0,1,0). Portanto, a cor de fundo #1565c0 prevalecerá sobre a cor #555555, sem a necessidade de usar !important.
+*/
+.botao {
+  display: inline-block;
+  background-color: #555555; /* Regra mais fraca */
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5em 3em;
+  margin-top: 0.2em;
+  transition: background-color 0.3s;
+}
+
+.cartao .botao {
+  background-color: #1565c0; /* Regra mais forte por cascata/especificidade */
+}
+
+.botao:hover {
+  background-color: #0d47a1;
+}
+
+/* ---------- Lista de programação ---------- */
+.lista-dias {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Filho direto (>): Estiliza apenas itens de primeiro nível */
+.lista-dias > li {
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+/* Posição na irmandade */
+.lista-dias > li:first-child {
+  color: #1565c0;
+}
+
+.lista-dias > li:last-child {
+  color: #b71c1c;
+}
+
+/* Itens aninhados (remove o negrito herdado/aplicado) */
+.lista-dias > li ul li {
+  font-weight: normal;
+  color: #333333;
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+  max-width: 60%;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Asterisco visual em rótulos do formulário usando ::after */
+.formulario label::after {
+  content: " *";
+  color: #b71c1c;
+}
+
+/* Agrupamento: h1, h2 e h3 não tinham regras estritamente iguais, 
+   então unifiquei as regras duplicadas de input e textarea */
+input, 
+textarea {
+  display: block;
+  width: 100%; /* Largura relativa flexível substituindo px */
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+}
+
+/* Foco nos campos do formulário */
+input:focus, 
+textarea:focus {
+  border-color: #1565c0;
+  outline: 2px solid #bbdefb;
+}
+
+/* Seletores de atributo */
+input[type="email"] {
+  border-left: 4px solid #1565c0;
+}
+
+input[type="password"] {
+  border-left: 4px solid #b71c1c;
+}
+
+button {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #1565c0;
+  padding: 0.5rem 1.5em;
+  margin-top: 1rem;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: #263238;
+  color: #cfd8dc;
+  padding: 1.5rem;
+  font-size: 0.75rem;
+}
