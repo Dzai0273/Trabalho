@@ -137,7 +137,7 @@ p {
 */
 .botao {
   display: inline-block;
-  background-color: #555555; /* Regra mais fraca */
+  background-color: red; /* Regra mais fraca */
   color: #ffffff;
   font-size: 1rem;
   text-decoration: none;
