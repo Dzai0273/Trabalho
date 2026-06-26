@@ -147,11 +147,11 @@ p {
 }
 
 .cartao .botao {
-  background-color: red; /* Regra mais forte por cascata/especificidade */
+  background-color: grey; /* Regra mais forte por cascata/especificidade */
 }
 
 .botao:hover {
-  background-color: darkred;
+  background-color: darkblue;
 }
 
 /* ---------- Lista de programação ---------- */
