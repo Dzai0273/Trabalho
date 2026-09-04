@@ -171,17 +171,16 @@ footer {
     gap: 0;
     text-align: center;
     border: 1px solid #F5F5F5;
-    justify-content: center;
+}
+
+.atividade p,
+.atividade a {
+    padding: 12px;
+    border: 1px solid #F5F5F5;
 }
 
 .titulo {
     background-color: #0d0d0d;
-    border: none;
-}
-
-.atividade p, .atividade a {
-    padding: 12px;
-    border: 1px solid #F5F5F5;
 }
 
 .atividade a {
@@ -192,6 +191,5 @@ footer {
 
 .atividade a:hover {
     color: white;
-    text-decoration: underline;
 }
 
