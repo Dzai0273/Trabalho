@@ -149,3 +149,50 @@ footer {
     border: 1px solid whitesmoke;
     max-width: 75px
 }
+
+.atividade {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.atividade table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.atividade th,
+.atividade td {
+    padding: 12px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.atividade th:nth-child(1),
+.atividade td:nth-child(1) {
+    width: 25%;
+}
+
+.atividade th:nth-child(2),
+.atividade td:nth-child(2) {
+    width: 45%;
+}
+
+.atividade th:nth-child(3),
+.atividade td:nth-child(3) {
+    width: 30%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.minha_foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
