@@ -165,31 +165,33 @@ footer {
 }
 
 .atividade {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  margin: 8px;
-  gap: 0;
-  text-align: center;
-  border: 1px solid #F5F5F5;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin: 8px;
+    gap: 0;
+    text-align: center;
+    border: 1px solid #F5F5F5;
+    justify-content: center;
 }
 
-.titulo{
-  background-color: #0d0d0d;
-  border: none;
+.titulo {
+    background-color: #0d0d0d;
+    border: none;
 }
 
-.atividade p, .atividades a{
-  padding: 12px;
-  border: 1px solid #F5F5F5;
+.atividade p, .atividade a {
+    padding: 12px;
+    border: 1px solid #F5F5F5;
 }
 
-.atividade a{
-  color: 1a1a1a;
-  font-size: 20px;
-  text-decoration: none;
+.atividade a {
+    color: #00bfff;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.atividade a:hover{
-  color: black;
+.atividade a:hover {
+    color: white;
+    text-decoration: underline;
 }
+
