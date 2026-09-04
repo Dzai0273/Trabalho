@@ -150,39 +150,6 @@ footer {
     max-width: 75px
 }
 
-.atividade {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-}
-
-.atividade table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-
-.atividade th,
-.atividade td {
-    padding: 12px;
-    text-align: center;
-    word-wrap: break-word;
-}
-
-.atividade th:nth-child(1),
-.atividade td:nth-child(1) {
-    width: 25%;
-}
-
-.atividade th:nth-child(2),
-.atividade td:nth-child(2) {
-    width: 45%;
-}
-
-.atividade th:nth-child(3),
-.atividade td:nth-child(3) {
-    width: 30%;
-}
 
 .cabecalho {
     display: flex;
@@ -195,4 +162,34 @@ footer {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin: 8px;
+  gap: 0;
+  text-align: center;
+  border: 1px solid black;
+  justify-content: center;
+}
+
+.titulo{
+  background-color: #0d0d0d;
+  border: none;
+}
+
+nav p, nav a{
+  padding: 12px;
+  border: 1px solid black
+}
+
+nav a{
+  color: 1a1a1a;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: black;
 }
