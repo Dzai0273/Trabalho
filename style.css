@@ -164,7 +164,7 @@ footer {
     object-fit: cover;
 }
 
-.atividades {
+.atividade {
   display: grid;
   grid-template-columns: 3fr 2fr;
   margin: 8px;
@@ -179,17 +179,17 @@ footer {
   border: none;
 }
 
-.atividades p, .atividades a{
+.atividade p, .atividades a{
   padding: 12px;
   border: 1px solid black
 }
 
-.atividades a{
+.atividade a{
   color: 1a1a1a;
   font-size: 20px;
   text-decoration: none;
 }
 
-.atividades a:hover{
+.atividade a:hover{
   color: black;
 }
